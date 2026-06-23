@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Module that uses calculator_1 functions to perform basic maths."""
+"""Module that uses calculator functions to perform basic maths."""
 from calculator_1 import add, sub, mul, div
 if __name__ == "__main__":
-    a = 10 
+    a = 10
     b = 5
     print("{} + {} = {}".format(a, b, add(a,b)))
     print("{} - {} = {}".format(a, b, sub(a,b)))
