@@ -1,4 +1,12 @@
 #!/usr/bin/python3
-print("%s" % "".join(
-    chr(97 + 25 - i) if i % 2 == 0 else chr(65 + 25 - i)
-    for i in range(26)), end="")
+"""Module that defines remove_char_at."""
+
+
+def remove_char_at(str, n):
+    """Return a new string with the character at index n removed.
+
+    If n is negative or out of range, the string is returned unchanged.
+    """
+    if n < 0 or n >= len(str):
+        return str
+    return str[:n] + str[n + 1:]
