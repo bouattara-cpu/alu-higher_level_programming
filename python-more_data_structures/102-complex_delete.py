@@ -3,5 +3,8 @@
 
 
 def complex_delete(a_dictionary, value):
-    """Return a new dictionary with keys matching value removed."""
-    return {k: v for k, v in a_dictionary.items() if v != value}
+    """Delete keys with a specific value in a dictionary, in place."""
+    keys_to_delete = [k for k, v in a_dictionary.items() if v == value]
+    for k in keys_to_delete:
+        del a_dictionary[k]
+    return a_dictionary
