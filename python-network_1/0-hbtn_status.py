@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 """
-Module that fetches a given URL and displays response details.
+Fetches https://intranet.hbtn.io/status.
 """
-import sys
 import urllib.request
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        url = sys.argv[1]
-        with urllib.request.urlopen(url) as response:
-            body = response.read()
-            print("Body response:")
-            print(f"\t- type: {type(body)}")
-            print(f"\t- content: {body}")
-            print(f"\t- utf8 content: {body.decode('utf-8')}")
+    url = "https://intranet.hbtn.io/status"
+    with urllib.request.urlopen(url) as response:
+        body = response.read()
+        print("Body response:")
+        print(f"\t- type: {type(body)}")
+        print(f"\t- content: {body}")
+        print(f"\t- utf8 content: {body.decode('utf-8')}")
