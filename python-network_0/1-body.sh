@@ -1,3 +1,3 @@
 #!/bin/bash
-# Takes in a URL, sends a GET request, and displays the body of a 200 response
-curl -s -L "$1"
+# Sends a GET request to a URL and displays the body of a 200 status code response
+curl -s -o /dev/stdout -w "%{http_code}" "$1"
