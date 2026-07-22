@@ -1,8 +1,6 @@
-#!/usr/init/env python3
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
 """
 Module that fetches https://alu-intranet.hbtn.io/status
-using the requests package.
 """
 import requests
 
