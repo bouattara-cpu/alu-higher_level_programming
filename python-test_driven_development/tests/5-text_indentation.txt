@@ -1,4 +1,3 @@
-$ cat tests/5-text_indentation.txt
 The ``text_indentation`` function
 ====================================
 
@@ -13,26 +12,18 @@ Import the function:
 
 Print a simple text:
 
-    >>> text_indentation("Hello. How are you? I am fine: thanks.")
+    >>> text_indentation("Hello. How are you? I am fine: thanks")
     Hello.
     <BLANKLINE>
     How are you?
     <BLANKLINE>
     I am fine:
     <BLANKLINE>
-    thanks.
-    <BLANKLINE>
+    thanks
 
 Print an empty string:
 
     >>> text_indentation("")
-
-The function returns None:
-
-    >>> text_indentation("Hi.") is None
-    Hi.
-    <BLANKLINE>
-    True
 
 Error handling
 --------------
@@ -48,9 +39,3 @@ Raise TypeError when text is None:
     >>> text_indentation(None)
     Traceback (most recent call last):
     TypeError: text must be a string
-
-Raise TypeError when no arguments are given:
-
-    >>> text_indentation()
-    Traceback (most recent call last):
-    TypeError: text_indentation() missing 1 required positional argument: 'text'

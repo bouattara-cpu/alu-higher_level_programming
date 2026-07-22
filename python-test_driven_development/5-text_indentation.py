@@ -12,20 +12,19 @@ def text_indentation(text):
     Args:
         text (str): the text to print.
     """
-    if not isinstance(text, str):
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
+    stripped = text.strip()
     line = ""
-    for char in text:
-        if char == " " and line == "":
-            continue
-        line += char
-        if char in ".?:":
-            print(line.strip())
+    for char in stripped:
+        if char in "?.:":
+            line += char
+            print(line)
             print()
             line = ""
-        elif char == "\n":
-            print(line.strip())
-            line = ""
-    if line.strip():
-        print(line.strip())
+        elif char == " " and (len(line) == 0 or line[-1] == " "):
+            continue
+        else:
+            line += char
+    print(line, end="")
