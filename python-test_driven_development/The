@@ -1,7 +1,4 @@
-The ``matrix_divided`` function
-=================================
-
-Divide all elements of a matrix by a number, rounded to 2 decimals.
+vide all elements of a matrix by a number, rounded to 2 decimals.
 
 Basic usage
 -----------
